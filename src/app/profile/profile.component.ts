@@ -20,7 +20,7 @@ export class ProfileComponent implements OnInit {
 
   }
 
-  findProfile(){
+  submitInput(){
     this.profileService.updateProfile(this.username);
     this.profileService.getProfileInfo().subscribe(profile =>{
       console.log(profile);
