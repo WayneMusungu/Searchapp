@@ -13,7 +13,7 @@
                     <img src="{{profile.avatar_url}}" class="rounded-circle img-responsive" alt="Profile Avatar"
                         data-holder-rendered="true" style="width: 90%;">
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-3">
                     <ul class="list-group">
                         <li class="list-group-item" *ngIf="profile.bio">
                             {{profile.bio}}
@@ -28,6 +28,30 @@
                                 href="emailto:{{profile.email}}">{{profile.email}}</a>
                         </li>
                     </ul>
+                </div>
+                <div class="col-md-2">
+                    <span class="label label-default">{{profile.followers}} Followers</span>
+                    <br>
+                    <span class="label label-primary">{{profile.following}} Following</span>
+                    <br>
+                    <span class="label label-success">{{profile.public_gists}} Public gists</span>
+                    <br>
+                    <span class="label label-info">{{profile.public_repos}} Public Repos</span><br>
+                    <p><a href="{{profile.html_url}}" class="btn btn-success btn-small">View Github Profile</a></p>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Repositories</h3>
+                        </div>
+                        <div class="card-body" *ngFor="let repo of repos">
+                            <p class="clearfix">
+                                {{repo.name}} <a href="{{repo.html_url}}" target= "_blank" class="btn btn-warning btn-sm float-right" >View this project on Github</a>
+                            </p>
+                            <p>{{repo.description}}</p>
+                        </div>
+                    </div>
+
+
+
                 </div>
 
             </div>
