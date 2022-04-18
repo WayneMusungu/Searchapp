@@ -1,4 +1,4 @@
-<div class="whole">
+
   <div class="container">
     <h1>
       Welcome to GITSEARCH where you can search for any user profile and it
@@ -52,7 +52,7 @@
             <div class="col-md-3">
               <ul class="list-group">
                 <li class="list-group-item" *ngIf="profile.bio">
-                  twitter_username
+                  twitter_username:
                   {{ profile.twitter_username }}
                 </li>
                 <li class="list-group-item" *ngIf="profile.bio">
@@ -91,7 +91,7 @@
 
             <div class="col-md-12">
               <div class="row">
-                <div class="col-md-4 card" *ngFor="let repo of repos">
+                <div id= "twty"class="col-md-4 card" *ngFor="let repo of repos">
                   <p class="clearfix">
                     {{ repo.name }}
                     <a
@@ -118,4 +118,4 @@
       </div>
     </div>
   </div>
-</div>
+
