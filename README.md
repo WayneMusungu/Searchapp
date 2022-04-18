@@ -20,6 +20,7 @@ This is an angular application that uses GitHub API to search for  GitHub users 
 
 ## Live Demo
 To view the page click on the link below
+https://waynemusungu.github.io/Searchapp/
 
 ## Technology Used 
 *Angular CLI
