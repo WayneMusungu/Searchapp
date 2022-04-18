@@ -1,4 +1,5 @@
 <div class="container">
+    <h1>Welcome to GITSEARCH where you can search for any user profile and it displays the user's repositories</h1>
     <form action="" class="search-form">
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Search git users with username" [(ngModel)]="username" name="username" (keyup)="submitInput()">
@@ -6,7 +7,6 @@
         </div>
         
     </form>
-    <p>profile works!</p>
     <div *ngIf="profile">
         <div class="card">
             <div class="card-header">
@@ -20,6 +20,7 @@
                     <div class="col-md-5">
                         <img src="{{profile.avatar_url}}" class="rounded-circle img-responsive" alt="Profile Avatar"
                             data-holder-rendered="true" style="width: 90%;">
+                            <p><a href="{{profile.html_url}}" class="btn btn-success btn-small">View Profile</a></p>
                     </div>
                     <div class="col-md-3">
                         <ul class="list-group">
@@ -48,7 +49,6 @@
                         <span class="label label-success">{{profile.public_gists}} Public gists</span>
                         <br>
                         <span class="label label-info">{{profile.public_repos}} Public Repos</span><br>
-                        <p><a href="{{profile.html_url}}" class="btn btn-success btn-small">View Profile</a></p>
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">Repositories</h3>
@@ -58,8 +58,13 @@
                                     {{repo.name}} <a href="{{repo.html_url}}" target= "_blank" class="btn btn-warning btn-sm float-right" >View this project on Github</a>
                                 </p>
                                 <p>Number of forks: {{repo.forks}}</p>
-                                <p>{{repo.description}}</p>
+                                <p>Description: {{repo.description}}</p>
+                                <p>Language: {{repo.language}}</p>
+                                <div class="date">
+                                    <small><span>last modified:</span>{{repo.updated_at | date}} </small>
+                                </div>
                             </div>
+                            <br>
                         </div>
     
     

@@ -1,8 +1,15 @@
 .search-form{
-    /* height: 10px;
-    width: 70px; */
+    height: 10px;
+    width: 260px; 
     padding-top: 50px;
-    /* margin: 100px; */
-
-    
+    margin: 100px;
+    align-items: center;
+    align-content: center;    
+}
+h1{
+    text-align: center;
+    margin-top: 20px;
+}
+.btn {
+    align-content: center;
 }
