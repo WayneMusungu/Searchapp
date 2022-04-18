@@ -30,7 +30,7 @@ export class ProfileComponent implements OnInit {
       console.log(repos);
       this.repos= repos;
     })
-    // this.profileService
+    
   }
 
   
