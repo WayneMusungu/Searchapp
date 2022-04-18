@@ -10,6 +10,10 @@ h1{
     text-align: center;
     margin-top: 20px;
 }
-.btn {
+#btn {
     align-content: center;
+    background-color: brown;
 }
+/* .whole{
+    background-color: #B0EACD;
+} */
