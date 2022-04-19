@@ -27,7 +27,7 @@ https://waynemusungu.github.io/Searchapp/
 
 *HTML
 
-*SCSS
+*CSS
 
 *Typescript
 
